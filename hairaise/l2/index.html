@@ -1,0 +1,513 @@
+<!doctype html>
+<html>
+ 
+ <meta http-equiv="content-type" content="text/html;charset=UTF-8" /> 
+<head>
+	<meta charset="utf-8">
+	<title>Hairise</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link href="img/favicon.png" rel="shortcut icon" type="image/x-icon"/>	
+	<link rel="stylesheet" media="all" href="css/style.css" >	
+	<style>
+		@font-face{font-family:Roboto;font-style:normal;font-weight:400;src:local('Roboto'),local('Roboto-Regular'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Roboto;font-style:normal;font-weight:400;src:local('Roboto'),local('Roboto-Regular'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu5mxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Roboto;font-style:normal;font-weight:400;src:local('Roboto'),local('Roboto-Regular'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7mxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:Roboto;font-style:normal;font-weight:400;src:local('Roboto'),local('Roboto-Regular'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4WxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:Roboto;font-style:normal;font-weight:400;src:local('Roboto'),local('Roboto-Regular'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7WxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB}@font-face{font-family:Roboto;font-style:normal;font-weight:400;src:local('Roboto'),local('Roboto-Regular'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7GxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Roboto;font-style:normal;font-weight:400;src:local('Roboto'),local('Roboto-Regular'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Roboto;font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),local('sans-serif-medium'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fCRc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Roboto;font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),local('sans-serif-medium'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fABc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Roboto;font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),local('sans-serif-medium'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fCBc4AMP6lbBP.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:Roboto;font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),local('sans-serif-medium'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:Roboto;font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),local('sans-serif-medium'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fCxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB}@font-face{font-family:Roboto;font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),local('sans-serif-medium'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fChc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Roboto;font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),local('sans-serif-medium'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Roboto;font-style:normal;font-weight:700;src:local('Roboto Bold'),local('Roboto-Bold'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfCRc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Roboto;font-style:normal;font-weight:700;src:local('Roboto Bold'),local('Roboto-Bold'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfABc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Roboto;font-style:normal;font-weight:700;src:local('Roboto Bold'),local('Roboto-Bold'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfCBc4AMP6lbBP.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:Roboto;font-style:normal;font-weight:700;src:local('Roboto Bold'),local('Roboto-Bold'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:Roboto;font-style:normal;font-weight:700;src:local('Roboto Bold'),local('Roboto-Bold'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfCxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB}@font-face{font-family:Roboto;font-style:normal;font-weight:700;src:local('Roboto Bold'),local('Roboto-Bold'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfChc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Roboto;font-style:normal;font-weight:700;src:local('Roboto Bold'),local('Roboto-Bold'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Rozha One';font-style:normal;font-weight:400;src:local('Rozha One Regular'),local('RozhaOne-Regular'),url(https://fonts.gstatic.com/s/rozhaone/v4/AlZy_zVFtYP12Zncg2kRc335fh4DolH3.woff2) format('woff2');unicode-range:U+0900-097F,U+1CD0-1CF6,U+1CF8-1CF9,U+200C-200D,U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FB}@font-face{font-family:'Rozha One';font-style:normal;font-weight:400;src:local('Rozha One Regular'),local('RozhaOne-Regular'),url(https://fonts.gstatic.com/s/rozhaone/v4/AlZy_zVFtYP12Zncg2kRfH35fh4DolH3.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Rozha One';font-style:normal;font-weight:400;src:local('Rozha One Regular'),local('RozhaOne-Regular'),url(https://fonts.gstatic.com/s/rozhaone/v4/AlZy_zVFtYP12Zncg2kRcn35fh4Dog.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+	</style>
+	<style>
+		.footer{
+			background: #EAEAEA !important;
+		}	
+	</style>
+	
+<script type="text/javascript" src="script_land.js" defer></script></head>
+<body>
+<!-- BEGIN  out-->
+<div  class="navbar" style="display: none;">	
+	<div class="navbar-contain container">	
+		<a href="#innovazione" class="navbar-logo js-link"><span class="navbar-logo__ico"></span></a>	
+		<ul id="fixed-nav" class="navbar-menu">
+			<li class="navbar__item"><a class="js-link" href="#innovazione">Główna </a></li>
+			<li class="navbar__item"><a class="js-link" href="#ingredients">Skład</a></li>
+			<li class="navbar__item"><a class="js-link" href="#comments">Komentarze </a></li>
+			<li class="navbar__item"><a class="js-link" href="#steps">Dostawa</a></li>	
+		</ul>	
+		<a href="#order-form" class="navbar__button button-wrap button-wrap_sm js-to-form"><span  class="button button_sm">Kupić<i class="arrow"></i></span></a>	
+	</div>
+</div>
+<!-- END  out-->
+<!-- BEGIN  out-->
+<div class="out">
+<!-- BEGIN  Banner-->	
+	 <div class="show-btn " id="js-red-btn" style="display: none;">
+	        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
+	        <circle style="fill:#FF0404;" cx="22.5" cy="22.5" r="22.5"/>
+	        <polygon style="fill:#FFFFFF;" points="28,12.1 13,22 28,32 "/>
+	    </svg>
+	    </div>
+	 <!-- HurryUp block -->
+	    <div class="hurryUp" id="hurryUp" style="display: none;">
+	        <span class="hurryUp__close"></span>
+	        <div class="hurryUp-left hurryUp__text">
+	            Nie przegap okazji do zakupu
+	            <b>Hairise z maksymalną zniżką!</b>
+	        </div>
+	        <div class="hurryUp-right hurryUp__text">
+	            <b class="hurryUp__text-bold">Pośpiesz się!</b>
+	            <span class="hurryUp__text-desc">Oferta jest ograniczona</span>       
+	            <div class="counter js-countdown">
+	                <span class="counter__elem counter__elem1 js-count-digit">0</span>
+	                <span class="counter__elem js-count-digit">0</span>
+	                <span class="counter__elem js-count-digit">0</span>
+	            </div>
+	        </div>
+	    </div>
+	<!-- END: HurryUp block -->
+<!-- END Banner-->
+<!-- BEGIN  innovazione-->
+	<section id="innovazione" class="innovazione">
+		<div class="innovazione-top">	
+			<div class="container innovazione-wrap">
+				<div class="innovazione-left">
+					<div class="innovazione-title">
+						<h2>INNOWACJA&nbsp;<br>
+							<span class="innovazione-title_pos">
+								 2018 
+								 <span>
+								 	w walce <br>
+								 	z łysieniem						 	
+								 </span>
+							</span>
+						</h2>
+					</div>
+					<img class="innovazione__product" src="img/product.png" alt="product">
+					<div class="innovazione-list">
+						<ul >
+							<li class="innovazione-list__item">
+								Gęsta broda i wąsy				
+							</li>
+							<li class="innovazione-list__item">
+								Silne i zdrowe  włosy					
+							</li>
+							<li class="innovazione-list__item innovazione-list__item-last">	 	
+								Pozbycie  się łysienia								
+							</li>
+						</ul>
+						<img  src="img/innovazione-img.png" alt="">
+					</div>
+				</div>			
+				<div class="innovazione-right">
+					<div class="timer" style="display: none;">
+						<span class="timer__title">
+							Do końca promocji pozostało
+						</span>
+						<div class="timer-wrap">
+				           <div class="timer__item hours"></div>&nbsp;:&nbsp;<div class="timer__item minutes"></div>&nbsp;:&nbsp;<div class="timer__item seconds"></div> 
+			           </div>        
+					</div>				
+					<div id="order-form1"  class="order">										
+						<div  class="order-head">
+						<div class="discount"></div>
+						<div class="price bb">
+						    <div class="price__old  price__old-crossed">						       
+						        <span class="al-raw-cost-promo">258</span>
+						         <span class="al-raw-currency">zł</span>
+						    </div>
+						    <div class="price__new">						       
+						        <span class="al-raw-cost">129</span>
+						         <span class="al-raw-currency">zł</span>
+						    </div>
+						</div>
+						<h4 class="order__title">KUP HAIRISE ZE SPECJALNĄ ZNIŻKĄ</h4>
+						</div>
+						<form action="http://pl1.hairase.com/land/order" method="post" class="al-form form">
+						    <select name="country" class="al-country"></select>
+						    <div class="input-wrapper">
+						        <input type="text" name="name" class="form__input form__input-name" placeholder="Imię" id="name">
+						        <label for="name"></label>
+						    </div>
+						    <div class="input-wrapper">
+						        <input type="tel" name="phone" class="form__input" placeholder="Numer telefonu" id="phone">
+						        <label for="phone"></label>
+						    </div>						   	    
+						    <div class="button-wrap"><button type="submit" class="button form__submit js-submit js-button ">KUPIĆ<i class="arrow"></i></button></div>			    
+						    <div class="icons-secure">           
+						    </div>
+						</form>										
+					</div>	
+				</div>		
+			</div>
+		</div>
+		<div class="innovazione-bottom">		
+			<div class="innovazione-counter">					
+				<div class="container">
+					<span class="innovazione-counter__text">
+						Razem pakietów do promocji! 								
+					</span>
+					<div class="counter js-countdown">
+		                <span class="counter__elem counter__elem1 js-count-digit">0</span>
+		                <span class="counter__elem js-count-digit">0</span>
+		                <span class="counter__elem js-count-digit">0</span>
+		            </div>
+	        	</div>
+			</div>	
+		</div>
+	</section>
+<!-- END  innovazione-->
+<!-- BEGIN  causes-->
+	<section class="causes">
+		<div class="container">
+			<h3 class="causes-title">
+				Ciągły stres i rozwój kompleksów z powodu problemów z brakiem włosów?
+			</h3>
+			<div class="causes-list causes-left">
+				<div class="causes-item causes-item1">
+					Strach przed operacją
+				</div>
+				<div class="causes-item causes-item2">
+					Niska samoocena
+				</div>
+				<div class="causes-item causes-item3">
+					Potępienie innych
+				</div>
+			</div>
+			<div class="causes-list causes-right">
+				<div class="causes-item causes-item4">
+					Brak brody
+				</div>
+				<div class="causes-item causes-item5">
+					Łysiny na głowie
+				</div>
+				<div class="causes-item causes-item6">
+					<div class="causes-popup">
+						<div class="causes-popup__btn btn-throbbing">
+							<div class="btn-throbbing-shadow">
+								<div class="btn-throbbing__img js-img"></div>
+							</div>
+							<div class="btn-throbbing-border">
+							</div>					
+						</div>
+						<div class="causes-popup__block">
+							Mieszki włosowe są w trybie uśpienia i wymagają silnej naturalnej aktywacji.
+							<span class="causes-popup__ico js-close"></span>
+						</div>	
+					</div>		
+					<span class="causes-text">
+							Śpiące mieszki włosowe
+					</span>
+									
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- END  causes-->
+<!-- BEGIN  tape-first-->
+	<section class="tape-first">
+		<div class="container">		
+			<h3 class="tape-first-title">
+				Włosy na twarzy i głowie
+				to atrybuty prawdziwego mężczyzny.						
+			</h3>		
+		</div>	
+		<img src="img/tape-first-img.png" alt="">	
+	</section>
+	
+<!-- END  tape-first-->
+<!-- BEGIN  descript-->
+	<section class="descript">
+		<div class="container">
+			<h3 class="descript-title">
+				Hairise przywróci ci  <br> męskość!
+			</h3>
+			<img class="descript__product" src="img/product.png" alt="product">
+			<div class="descript-right">
+				<ul class="descript-list">
+					<li class="descript__item">
+						<h6>Naturalny skład</h6>
+						Unikalny kompleks naturalnych składników
+					</li>
+					<li class="descript__item">
+						<h6>Potężne działanie</h6>
+						Aktywuje uśpione mieszki włosowe
+					</li>
+					<li class="descript__item">
+						<h6>Szybka pomoc</h6>
+						Przyspiesza wzrost włosów na głowie i twarzy
+					</li>
+					<li class="descript__item">
+						<h6>Długotrwały efekt</h6>
+						Eliminuje przyczynę łysienia
+					</li>
+					<li class="descript__item">
+						<h6>Piękny wynik</h6>
+						Wspomaga wzrost silnych, zdrowych włosów
+					</li>
+				</ul>
+				<ul class="descript-icons">
+					<li class="descript__ico1"></li>
+					<li class="descript__ico2"></li>
+					<li class="descript__ico3"></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+<!-- END  descript-->
+<!-- BEGIN  ingredients-->
+	<section id="ingredients" class="ingredients">
+		<div class="container">
+			<h3 class="ingredients-title">
+				Hairise - siła naturalnych składników
+			</h3>
+			<div class="ingredients-list">
+				<div class="ingredients-item">
+					<img src="img/ingredient1.png" alt="">
+					<div class="ingredients-item-text">
+						<h4>
+							Naturalne  <br> oleje
+						</h4>
+						<p>
+							Cynamonowy i kokosowy  olej + keratyna odżywiają mieszki włosowe
+						</p>
+					</div>
+				</div>
+				<div class="ingredients-item">
+					<img src="img/ingredient2.png" alt="">
+					<div class="ingredients-item-text">
+						<h4>
+							Witamina  <br> B grupy
+						</h4>
+						<p>
+							Biotyna i niacyna przyspieszają rozwój silnych i zdrowych włosów
+						</p>
+					</div>
+				</div>
+				<div class="ingredients-item">
+					<img src="img/ingredient3.png" alt="">
+					<div class="ingredients-item-text">						
+						<h4>
+						Witaminy  <br>  A i E
+					</h4>
+					<p>
+						Aktywują działanie śpiących mieszków włosowych
+					</p>
+					</div>
+				</div>
+				<div class="ingredients-item">
+					<img src="img/ingredient4.png" alt="">
+					<div class="ingredients-item-text">
+					<h4>
+							Ekstrakty  <br> ziołowe
+						</h4>
+						<p>
+							Rumianek i pokrzywa promują naturalną produkcję męskiego hormonu
+						</p>
+				</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- END  ingredients-->
+<!-- BEGIN  comments-->
+	<section id="comments" class="comments">
+		<div class="container">
+			<h3 class="comments-title">
+				Co klienci mówią o Hairise
+			</h3>
+			<div class="comments-list">
+				<div class="comments-item">
+					<div class="comments-item__img comments-item__img-1"></div>
+					<h5>Stephen </h5>
+					<p>
+						Ile siebie pamiętam, moja broda nigdy nie rosła. Próbowałem dużo środków, w tym krople, oleje, minoksydyl. Ale pomógł mi tylko naturalny spray Hairise!
+					</p>
+				</div>
+				<div class="comments-item">
+					<div class="comments-item__img comments-item__img-2"></div>
+					<h5>Kuang </h5>
+					<p>
+						Zacząłem łysieć 5 lat temu. Straciłem poczucie własnej wartości, ciągle odczuwałem dyskomfort. Myślałem o transplantacji włosów, dopóki nie użyłem sprayu do Hairise. Oceńcie moje wyniki!
+					</p>
+				</div>
+				<div class="comments-item">
+					<div class="comments-item__img comments-item__img-3"></div>
+					<h5>Andre </h5>
+					<p>
+						Chciałem zapuścić brodę, ale nie mogłem uzyskać odpowiedniej długości. Używałem olejków, kropli, ale spray Hairise wchłania się znacznie szybciej i naprawdę pomaga. Zobaczcie sami!
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- END  comments--> 	
+<!-- BEGIN  tape-last-->
+	<section class="tape-last">
+		<img class="tape-last__img2" src="img/tape-last-img1.png" alt="">	
+		<div class="container">
+			<h3 class="tape-last-title">
+				<span class="tape-last-title_big">98%</span>			
+					pozytywnych opinii!						
+			</h3>
+		</div>
+		<img class="tape-last__img1" src="img/tape-last-img2.png" alt="">	
+	</section>
+<!-- END  tape-last--> 		
+<!-- BEGIN  expert--> 		
+	<section class="expert">
+		<div class="container">
+			<div class="expert-right">
+				<h3 class="expert-title">
+					Eksperci  <br> zalecają Hairise
+				</h3>
+				<div class="expert__name expert__name-sm">
+					<strong>
+						Baptiste Rover
+					</strong>
+					<p>
+						Barber, ekspert w dziedzinie odbudowy włosów
+
+					</p>
+				</div>
+				<div class="expert-content">
+					<p>
+						“Wcześniej profesjonaliści na całym świecie zalecali klientom z utratą włosów zastrzyki steroidów, przeszczepy włosów. W 2018 roku środki te ustępują miejsca naturalnym olejom i ekstraktom roślinnym.
+					</p>
+					<p>
+						Odpowiednie składniki są skutecznie połączone w nowym silnym aktywatorze włosów czyli naturalnym sprayu Hairise. Wyciągi roślinne przyczyniają się do produkcji męskiego hormonu, a oleje otwierają mieszki włosowe do nasycenia witaminami A i E, biotyną i keratyną. Prawidłowy dopływ krwi do mieszków włosowych przyspiesza wzrost silnych i zdrowych włosów. Polecam Hairise wszystkim moim klientom!”
+					</p>			
+				</div>
+				<div class="expert__name">
+					<strong>
+						Baptiste Rover
+					</strong>
+					<p>
+						Barber, ekspert w dziedzinie odbudowy włosów
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- END  expert--> 		
+<!-- BEGIN  steps--> 		
+	<section id="steps" class="steps">
+		<div class="container">
+			<h3 class="steps-title">
+				4 Proste kroki do gęstych włosów i brody
+			</h3>
+			<ul class="steps-list">
+				<li class="steps-item steps-item-1">
+					<h5>Szybko</h5>
+					<p>Wypełnij formularz na stronie internetowej, podając swoje imię i nazwisko oraz numer telefonu</p>
+				</li>
+				<li class="steps-item steps-item-2">
+					<h5>Dogodnie</h5>
+					<p>Operator oddzwoni do Ciebie i poda szczegóły dostawy</p>
+				</li>
+				<li class="steps-item steps-item-3">
+					<h5>Bezpiecznie</h5>
+					<p>Płać kurierowi po otrzymaniu towaru</p>
+				</li>
+				<li class="steps-item steps-item-4">
+					<h5>Skutecznie</h5>
+					<p>Użyj sprayu, ciesz się gęstymi włosami</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+<!-- END  steps--> 
+<!-- BEGIN  innovazione-bottom--> 		
+	<section id="innovazione-bottom" class="innovazione">
+		<div class="innovazione-top">	
+			<div class="container innovazione-wrap">
+				<div class="innovazione-left">
+					<div class="innovazione-title">
+						<h2>INNOWACJA &nbsp;<br>
+							<span class="innovazione-title_pos">
+								 2018 
+								 <span>
+								 	w walce <br>
+								 	z łysieniem					 	
+								 </span>
+							</span>
+						</h2>
+					</div>
+					<img class="innovazione__product" src="img/product.png" alt="product">
+					<div class="innovazione-list">
+						<ul >
+							<li class="innovazione-list__item">
+								Gęsta broda i wąsy				
+							</li>
+							<li class="innovazione-list__item">
+								Silne i zdrowe  włosy				
+							</li>
+							<li class="innovazione-list__item innovazione-list__item-last">				 	
+								Pozbycie  się łysienia
+								
+							</li>
+						</ul>
+						<img  src="img/innovazione-img.png" alt="">
+					</div>
+				</div>
+				<div class="innovazione-right">
+					<div class="timer" style="display: none;">
+						<span class="timer__title">
+							Do końca promocji pozostało
+						</span>
+						<div class="timer-wrap">
+				           <div class="timer__item hours"></div>&nbsp;:&nbsp;<div class="timer__item minutes"></div>&nbsp;:&nbsp;<div class="timer__item seconds"></div> 
+			           </div>        
+					</div>
+					<div id="order-form2"  class="order">					
+						<div  class="order-head">
+						<div class="discount"></div>
+						<div class="price bb">
+						   <div class="price__old  price__old-crossed">						       
+						        <span class="al-raw-cost-promo">258</span>
+						         <span class="al-raw-currency">zł</span>
+						    </div>
+						    <div class="price__new">						       
+						        <span class="al-raw-cost">129</span>
+						         <span class="al-raw-currency">zł</span>
+						    </div>
+						</div>
+						<h4 class="order__title">KUP HAIRISE ZE SPECJALNĄ ZNIŻKĄ</h4>
+						</div>
+						<form action="http://pl1.hairase.com/land/order" method="post" class="al-form form">
+						    <select name="country" class="al-country"></select>
+						    <div class="input-wrapper">
+						        <input type="text" name="name" class="form__input form__input-name" placeholder="Imię" id="name1">
+						        <label for="name1"></label>
+						    </div>
+						    <div class="input-wrapper">
+						        <input type="tel" name="phone" class="form__input" placeholder="Numer telefonu" id="phone1">
+						        <label for="phone1"></label>
+						    </div>						   			    
+						    <div class='button-wrap'><button type="submit" class="button form__submit js-submit js-button ">KUPIĆ<i class="arrow"></i></button></div>			    
+						    <div class="icons-secure">           
+						    </div>
+						</form>										
+					</div>	
+				</div>		
+			</div>
+		</div>
+		<div class="innovazione-bottom">
+			<div class="innovazione-counter">					
+				<div class="container">
+					<span class="innovazione-counter__text">
+						Razem pakietów do promocji! 						
+					</span>
+					<div class="counter js-countdown">
+		                <span class="counter__elem counter__elem1 js-count-digit">0</span>
+		                <span class="counter__elem js-count-digit">0</span>
+		                <span class="counter__elem js-count-digit">0</span>
+		            </div>
+	        	</div>
+			</div>	
+		</div>		
+	</section>
+<!-- END  innovazione-bottom--> 
+</div>
+<!-- END out-->
+<script src="js/app.js"></script>
+<script type="text/javascript" src="tl-validatoree71.js?country=pl&amp;label=true"></script>
+<script src="js/common.js"></script>
+</body>
+
+ 
+</html>
